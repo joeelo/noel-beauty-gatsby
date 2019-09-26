@@ -45,9 +45,9 @@ const NavBar = (props) => {
                 <Link to="/AboutPage"> <NavItem> About </NavItem></Link>
                 <Link to="/PortfolioPage"> <NavItem> Portfolio </NavItem> </Link> 
                 <Link to="/CelebrityPage"> <NavItem> Celebrity </NavItem> </Link>
-                <Link to="/Blog"> <NavItem> Blog </NavItem> </Link>
-                <Link to="/Videos"> <NavItem> Videos </NavItem> </Link>
-                <Link to="/Contact"> <NavItem> Contact </NavItem> </Link>
+                {/* <Link to="/Blog"> <NavItem> Blog </NavItem> </Link> */}
+                <Link to="/VideoPage"> <NavItem> Videos </NavItem> </Link>
+                <Link to="/ContactPage"> <NavItem> Contact </NavItem> </Link>
             </Nav>
         </NavContainer>
 

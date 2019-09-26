@@ -9,8 +9,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header2";
+import Header from "./Header";
 import NavBar from "./NavBar";
+import Footer from "./Footer";
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -40,12 +41,9 @@ const Layout = ({ children }) => {
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
       </div>
+        <Footer/>
     </>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 export default Layout

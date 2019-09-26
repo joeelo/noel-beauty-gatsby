@@ -1,12 +1,12 @@
 import React from "react"
 import Layout from "../components/layout"
 
-const PortfolioPage = (props) => {
+const VideoPage = (props) => {
     return (
         <Layout>
-            Portfolio Page
+            Video Page
         </Layout>
     )
 }
 
-export default PortfolioPage;
+export default VideoPage;
