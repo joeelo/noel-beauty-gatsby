@@ -15,6 +15,16 @@ module.exports = {
       },
     },
     {
+      // plugin that transforms the docs (.md) files into html contents added and configured
+       resolve:`gatsby-transformer-remark`,
+       options:{
+            commonmark: true,
+            footnotes: true,
+            pedantic: true,
+            gfm: true,
+       }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/images`,
@@ -42,16 +52,6 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     }, 
-    {
-      // plugin that transforms the docs (.md) files into html contents added and configured
-       resolve:`gatsby-transformer-remark`,
-       options:{
-            commonmark: true,
-            footnotes: true,
-            pedantic: true,
-            gfm: true,
-       }
-   },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
