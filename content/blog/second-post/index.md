@@ -1,6 +1,6 @@
 ---
 path: "/post-2"
-title: "First Blog Post"
+title: "Second Blog Post"
 author: "Joe Lorenzo"
 ---
 
