@@ -1,7 +1,26 @@
 import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
-import Header from "./Header"
+
+
+// Home page - about me - Resume- clients - portfolio - clients / celebrities - video - book/ lifestyle- blog- contact
+const NavBar = (props) => {
+    return (
+        <NavContainer>
+            <Nav>
+                <Link to="/AboutPage"> <NavItem> About </NavItem></Link>
+                <Link to="/PortfolioPage"> <NavItem> Portfolio </NavItem> </Link> 
+                <Link to="/CelebrityPage"> <NavItem> Celebrity </NavItem> </Link>
+                <Link to="/BlogPage"> <NavItem> Blog </NavItem> </Link>
+                <Link to="/VideoPage"> <NavItem> Videos </NavItem> </Link>
+                <Link to="/ContactPage"> <NavItem> Contact </NavItem> </Link>
+            </Nav>
+        </NavContainer>
+
+    )
+}
+
+export default NavBar;
 
 const NavContainer = styled.div`
     width: 80vw;
@@ -30,28 +49,13 @@ const NavItem = styled.span`
     color: black;
     font-size: 14px;
     text-decoration: none;
+    font-size: 18px;
 
     :hover {
         border-bottom: 2px solid black;
     }
+
+    @media (max-width: 600px) {
+        font-size: 12px;
+    }
 `
-
-// Home page - about me - Resume- clients - portfolio - clients / celebrities - video - book/ lifestyle- blog- contact
-const NavBar = (props) => {
-    return (
-
-        <NavContainer>
-            <Nav>
-                <Link to="/AboutPage"> <NavItem> About </NavItem></Link>
-                <Link to="/PortfolioPage"> <NavItem> Portfolio </NavItem> </Link> 
-                <Link to="/CelebrityPage"> <NavItem> Celebrity </NavItem> </Link>
-                {/* <Link to="/Blog"> <NavItem> Blog </NavItem> </Link> */}
-                <Link to="/VideoPage"> <NavItem> Videos </NavItem> </Link>
-                <Link to="/ContactPage"> <NavItem> Contact </NavItem> </Link>
-            </Nav>
-        </NavContainer>
-
-    )
-}
-
-export default NavBar;
