@@ -16,6 +16,7 @@ const Heading = styled.h1`
     margin: 0;
     font-size: 3em;
     color: black;
+    font-faily: adamina, serif;
 `
 
 const Subheading = styled.h2`

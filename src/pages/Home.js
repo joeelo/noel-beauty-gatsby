@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-
 //khaled ghareeb owns photo unsplash
 const Home = (props) => {
     return (

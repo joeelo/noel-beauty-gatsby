@@ -30,6 +30,7 @@ const NavContainer = styled.div`
     justify-content: center;
     align-items: center;
     font-family: Adamina, serif;
+    margin-bottom: 50px;
 
     @media (max-width: 740px) {
         width: 90vw;
