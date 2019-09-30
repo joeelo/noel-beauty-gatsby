@@ -14,7 +14,5 @@ export default Footer;
 
 const Foot = styled.div`
     display: flex;
-    position: fixed: 
-    bottom: 0;
     flex-shrink: 0;
 `

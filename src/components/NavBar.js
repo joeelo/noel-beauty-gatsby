@@ -34,7 +34,7 @@ const NavContainer = styled.div`
     height: 5vh;
 
     @media (max-width: 740px) {
-        width: 90vw;
+        
     }
 `
 
