@@ -19,9 +19,10 @@ const HeaderContainer = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 150px;
+    height: 20vh;
     margin-left: 10px;
     font-family: Adamina, serif; 
+    flex-shrink: 0;
 `
 
 const Heading = styled.h1`

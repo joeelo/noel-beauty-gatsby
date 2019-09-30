@@ -23,14 +23,15 @@ const NavBar = (props) => {
 export default NavBar;
 
 const NavContainer = styled.div`
-    width: 80vw;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     font-family: Adamina, serif;
-    margin-bottom: 50px;
+    margin-bottom: 5vh;
+    height: 5vh;
 
     @media (max-width: 740px) {
         width: 90vw;
@@ -40,7 +41,7 @@ const NavContainer = styled.div`
 const Nav = styled.nav`
     display: flex;
     justify-content: space-around; 
-    width: 100vw;
+    width: 100%;
 `
 
 const NavItem = styled.span`

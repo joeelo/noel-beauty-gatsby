@@ -1,12 +1,20 @@
 import React from "react";
+import styled from "styled-components";
 
 const Footer = () => {
     const date = new Date().getFullYear();
     return (
-        <div>
+        <Foot>
             <h3>{date}</h3>
-        </div>
+        </Foot>
     )
 }
 
 export default Footer;
+
+const Foot = styled.div`
+    display: flex;
+    position: fixed: 
+    bottom: 0;
+    flex-shrink: 0;
+`

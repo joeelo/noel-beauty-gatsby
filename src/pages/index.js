@@ -15,9 +15,9 @@ const IndexPage = () => (
 
       <Image src={imageSrc} alt="photograph of Rachel Hill"/>
 
-      <section>
+      <Section>
         JoAnne Noel is a New York based makeup artist who has worked on many of the worlds most famouse celebrities and models. Not only does she have 
-      </section>
+      </Section>
     </PageContainer>
 
 
@@ -35,11 +35,16 @@ const Image = styled.img`
 `
 
 const PageContainer = styled.div`
-    width: 80vw;
+    width: 100%;
     display: flex;
     margin: 0 auto;
+    justify-content: center;
+    align-items: center;
 `
 
 const Section = styled.section`
-  @media
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
 `
