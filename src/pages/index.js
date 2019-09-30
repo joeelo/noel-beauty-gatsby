@@ -28,6 +28,10 @@ export default IndexPage;
 
 const Image = styled.img`
   width: 50%;
+
+  @media (max-width: 400px) {
+    display: none;
+  }
 `
 
 const PageContainer = styled.div`

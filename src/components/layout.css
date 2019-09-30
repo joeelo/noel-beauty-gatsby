@@ -8,11 +8,8 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  @media screen and (300px <= width <= 500px) {
-    font-size: 12px;
-  }
 }
+
 article,
 aside,
 details,
@@ -622,4 +619,12 @@ pre tt:after {
 }
 a {
   text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+  h1, h2 {
+    font-size: 1.2rem;
+  }
+
+
 }
