@@ -2,16 +2,26 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0;
 }
+
+* , *:before, *:after{ 
+  box-sizing:border-box; 
+  -moz-box-sizing:border-box; 
+  -webkit-box-sizing:border-box; 
+  -ms-box-sizing:border-box;
+}
+
 body {
   padding: 0;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-width: 300px;
 }
 
 html, body {
-  width: 100%;
   height: 100%;
 }
 
@@ -620,6 +630,7 @@ pre tt:after {
 
 div[role="group"][tabindex] {
   height: 100vh;
+  min-width: 300px;
 }
 
 @media only screen and (max-width: 480px) {

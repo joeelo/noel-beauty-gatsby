@@ -16,13 +16,12 @@ export default Header;
 
 const HeaderContainer = styled.div`
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    height: 20vh;
-    margin-left: 10px;
+    text-align: center;
     font-family: Adamina, serif; 
+    margin-bottom: 10px;
     flex-shrink: 0;
+    margin: 3vh 0;
 `
 
 const Heading = styled.h1`

@@ -29,15 +29,12 @@ const Layout = ({ children }) => {
     <SiteContainer>
       <Header siteTitle={data.site.siteMetadata.title} />
       <NavBar/>
-      <div
-        style={{
-          width: "100%",
-          flexGrow: "1"
-        }}
-      >
-        <main>{children}</main>
+      <MainContentWrapper>
 
-      </div>
+        {children}
+
+      </MainContentWrapper>
+
       <Footer/>
 
     </SiteContainer>
@@ -53,4 +50,10 @@ const SiteContainer = styled.div`
   align-items: stretch;
   width: 80vw;
   margin: 0 auto;
+`
+
+const MainContentWrapper = styled.div`
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
 `

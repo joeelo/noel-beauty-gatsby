@@ -24,17 +24,17 @@ export default NavBar;
 
 const NavContainer = styled.div`
     width: 100%;
-    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     font-family: Adamina, serif;
-    margin-bottom: 5vh;
+    margin: 1vh auto;
     height: 5vh;
 
-    @media (max-width: 740px) {
-        
+    @media (max-width: 420px) {
+        width: 100vw;
+        margin-left: -10vw;
     }
 `
 
@@ -45,19 +45,18 @@ const Nav = styled.nav`
 `
 
 const NavItem = styled.span`
-    padding: 3px; 
-    padding: 0 10px 0 10px;
+    padding: 0 10px;
     font-family: Adamina, serif;
     color: black;
-    font-size: 14px;
-    text-decoration: none;
     font-size: 18px;
+    text-decoration: none;
 
     :hover {
         border-bottom: 2px solid black;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 500px) {
         font-size: 12px;
+        padding: 0 5px;
     }
 `
