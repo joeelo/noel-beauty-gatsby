@@ -29,9 +29,16 @@ const Heading = styled.h1`
     font-size: 3em;
     color: black;
     font-faily: adamina, serif;
+
+    @media (max-width: 500px) {
+        font-size: 2em;
+    }
 `
 
 const Subheading = styled.h2`
     margin: 0;
     
+    @media (max-width: 500px) {
+        font-size: 1em;
+    }
 `

@@ -56,7 +56,7 @@ const NavItem = styled.span`
     }
 
     @media (max-width: 500px) {
-        font-size: 12px;
+        font-size: 14px;
         padding: 0 5px;
     }
 `

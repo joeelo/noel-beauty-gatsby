@@ -6,10 +6,15 @@ const PortfolioPage = (props) => {
     return (
         <Layout>
             <PageContainer>
-                <ScrollingContainer>
 
-                stuff;
-                </ScrollingContainer>
+                <MainContainer>
+                    <AbsoluteContainer>
+                        <ScrollingContainer>
+                        
+                        stuff;
+                        </ScrollingContainer>
+                    </AbsoluteContainer>
+                </MainContainer>
             </PageContainer>
         </Layout>
     )
@@ -23,9 +28,29 @@ const PageContainer = styled.div`
     flex-grow: 1;
 `
 
+const MainContainer = styled.div`
+    overflow: scroll;
+    width: 100vw;
+    background-color: blue;
+    height: 70vh;
+    margin-top: 5vh;
+`
+
 const ScrollingContainer = styled.div`
     display: flex;
-    height: 100%;
+    height: 60vh;
+    width: 2000px;
+    position: relative;
     background-color: green;
     overflow-x: scroll;
+    bottom: 0;
+`
+
+const AbsoluteContainer = styled.div`
+    position: absolute; 
+    width: 100vw;
+    background-color: red;
+    height: 60vh;
+    right: 0vw;
+    overflow: scroll;
 `
