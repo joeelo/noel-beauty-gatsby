@@ -28,7 +28,6 @@ const NavContainer = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    font-family: Adamina, serif;
     margin: 1vh auto;
     height: 5vh;
 
@@ -46,7 +45,8 @@ const Nav = styled.nav`
 
 const NavItem = styled.span`
     padding: 0 10px;
-    font-family: Adamina, serif;
+    font-family: Garamond, serif;
+    font-weight: 400;
     color: black;
     font-size: 18px;
     text-decoration: none;

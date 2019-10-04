@@ -28,7 +28,7 @@ const Heading = styled.h1`
     margin: 0;
     font-size: 3em;
     color: black;
-    font-faily: adamina, serif;
+    font-family: Helvetica Nueu, serif;
 
     @media (max-width: 500px) {
         font-size: 2em;
@@ -37,6 +37,7 @@ const Heading = styled.h1`
 
 const Subheading = styled.h2`
     margin: 0;
+    font-family: garamond, serif;
     
     @media (max-width: 500px) {
         font-size: 1em;
