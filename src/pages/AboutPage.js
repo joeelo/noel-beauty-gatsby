@@ -13,6 +13,7 @@ const About = (props) => {
 
                     <Figure>
                         <Image src="/images/about-me-image-1.jpeg" alt="image of desk with makeup"/>
+                        <Caption> JoAnne Noel setting up for Martha Stewart's show </Caption>
                     </Figure>
 
                     <Paragraph>
@@ -25,7 +26,7 @@ const About = (props) => {
                     <Figure>
 
                         <Image src="/images/about-me-image-2.jpg" alt="image of woman doing makeup on model"/>
-                        <figcaption> JoAnne Noel working on *** </figcaption>
+                        <Caption> JoAnne Noel working on model </Caption>
 
                     </Figure>
 
@@ -35,6 +36,7 @@ const About = (props) => {
 
                     <Figure>
                         <Image src="/images/about-me-image-3.jpg" alt="image of woman doing makeup on model"/>
+                        <Caption> JoAnne Noel working on natural styling </Caption>
                     </Figure>
 
                     <Paragraph>
@@ -74,7 +76,7 @@ const BioSection = styled.section`
 
 const Paragraph = styled.p`
     margin: 2% 0px;
-    font-size: 1em;
+    font-size: 16px;
     line-height: 2em;
     @media (max-width: 740px) {
         font-size: 12px;
@@ -86,11 +88,13 @@ const Figure = styled.figure`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 0;
 `
 
 const Caption = styled.figcaption`
     font-size: 12px;
     color: darkgrey;
+    padding: 0;
 `
 
 {/* <Image src="/images/about-me-image-1.jpeg" alt="image of desk with makeup"/>
