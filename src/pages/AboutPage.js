@@ -8,7 +8,7 @@ const About = (props) => {
             <PageContainer>
                 <BioSection>
                     <Paragraph> 
-                        A native New Yorker, Joanne Noel's style of classic beauty and flawless skin comes from her passion for classic film and fashion in the mid 20th century. It is a love that has led her to the halls of New York's Fashion Institute of Technology (FIT), and on to becoming the top global sales and makeup associate at Sak's Fifth Avenue, which was known as the number one retailer in the world. 
+                        A native New Yorker, Joanne Noel's style of classic beauty and flawless skin comes from her passion for classic film and fashion in the mid 20th century. It is a love that has led her to the halls of New York's Fashion Institute of Technology <i>(FIT)</i>, and on to becoming the top global sales and makeup associate at Sak's Fifth Avenue, which was known as the number one retailer in the world. 
                     </Paragraph>
 
                     <Figure>
@@ -19,6 +19,7 @@ const About = (props) => {
                     <Paragraph>
                         Known to many as a young makeup prodigy, Joanne Noel worked in New York’s top luxury department stores for 10 years with more than 80 percent of the city’s top cosmetic and retail vendors, including Chanel, Christian Dior, Givenchy, Guerlain, Sisley, Bloomingdale, Barney's, Bergdorf Goodman, and Jeffrey's selling-floors. This experience provided her with the product knowledge, and training skills both corporate leaders, and customers longed for in a luxury cosmetic experience. 
                     </Paragraph>
+
                     <Paragraph>
                         By the late 1990’s, JoAnne Noel had earned the distinguished opportunity to assist the late makeup legend Kevin Aucoin, and beauty icons Bobbi Brown, Laura Mercier and Francois Nars. During this time, JoAnne Noel came to understand cosmetic artistry through the eyes of the world’s greatest cosmeticians and was able to take bits and pieces of their mastery and mold them into her own signature style. 
                     </Paragraph>
@@ -78,6 +79,10 @@ const Paragraph = styled.p`
     margin: 2% 0px;
     font-size: 16px;
     line-height: 2em;
+    font-family: Lato, sans-serif; 
+    padding: 0 4vw; 
+    font-weight: 300;
+
     @media (max-width: 740px) {
         font-size: 12px;
     }
@@ -95,6 +100,10 @@ const Caption = styled.figcaption`
     font-size: 12px;
     color: darkgrey;
     padding: 0;
+
+    @media (max-width: 740px) {
+        font-size: 10px;
+    }
 `
 
 {/* <Image src="/images/about-me-image-1.jpeg" alt="image of desk with makeup"/>

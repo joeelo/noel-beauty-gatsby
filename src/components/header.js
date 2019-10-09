@@ -29,6 +29,7 @@ const Heading = styled.h1`
     font-size: 3em;
     color: black;
     font-family: Helvetica Neue, serif;
+    font-weight: 300;
 
     @media (max-width: 500px) {
         font-size: 2em;

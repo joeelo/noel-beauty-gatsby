@@ -12,7 +12,7 @@ const Footer = () => {
             </LeftContainer>
 
             <RightContainer>
-
+                <SocialLink> FB </SocialLink>
             </RightContainer>
         </Foot>
     )
@@ -35,21 +35,38 @@ const Foot = styled.div`
 
 const LeftContainer = styled.div`
     display: flex;
+    width: 50%;
 
 `
 
 const RightContainer = styled.div`
     display: flex;
+    width: 50%;
+
 `
 
-const FooterName = styled.h2`
+const FooterName = styled.span`
     margin: 0;
     padding: 0; 
     font-family: Helvetica Neue, serif;
+    font-size: 24px;
+    font-weight: 300;
+
+    @media (max-width: 740px) {
+        font-size: 16px;
+    }
 `
 
 const Year = styled.sup`
     position: relative; 
     top: 10px;
     left: 2px;
+    font-size: 10px;
+`
+
+const SocialLink = styled.div`
+    border-radius: 50%; 
+    border: 1px solid lightgrey;
+    padding: 3px;
+
 `
