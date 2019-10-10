@@ -39,6 +39,11 @@ const MainContainer = styled.div`
     width: 100vw;
     height: 90vh;
     margin-top: 5vh;
+
+    @media (max-width: 600px) {
+        height: 60vh;
+    }
+ 
 `
 
 const ScrollingContainer = styled.div`
@@ -47,8 +52,13 @@ const ScrollingContainer = styled.div`
     min-width: 90vw;
     position: relative;
     overflow-x: scroll;
+    overflow-y: disable;
     bottom: 0;
     background-color: antiquewhite;
+
+    @media (max-width: 400px) {
+        max-height: 60vh;
+    }
 
 `
 
@@ -57,7 +67,10 @@ const AbsoluteContainer = styled.div`
     width: 100vw;
     height: 80vh;
     right: 0vw;
-    overflow: scroll;
+
+    @media (max-width: 600px) {
+        height: 60vh;
+    }
 `
 
 const PlaceHolderDiv = styled.div`
@@ -67,11 +80,16 @@ const PlaceHolderDiv = styled.div`
 
     @media (max-width: 600px) {
         padding-right: 20vw;
+        height: 60vh;
     }
 `
 
 const Image = styled.img`
-    height: 80vh;
+    height: 100%;
     margin: 0;
     margin-right: 3px;
+
+    @media (max-width: 600px) {
+        height: 100%;
+    }
 `
