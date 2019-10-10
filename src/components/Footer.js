@@ -12,13 +12,30 @@ const Footer = () => {
             </LeftContainer>
 
             <RightContainer>
-                <SocialLink> FB </SocialLink>
+                <ContactEmail><Anchor href="mailto:noelbeauty@gmail.com"> NoelBeauty@gmail.com </Anchor></ContactEmail>
+                <LinkContainer>
+                    <SocialLink> FB </SocialLink>
+                    <SocialLink> <Anchor href="https://www.linkedin.com/in/joanne-noel-3008166/"> LKD </Anchor></SocialLink>
+                    <SocialLink> INS </SocialLink>
+                </LinkContainer>
             </RightContainer>
         </Foot>
     )
 }
 
 export default Footer;
+
+const Anchor = styled.a`
+    color: inherit;
+
+    :vistied {
+        color: black;
+    }
+
+    @media (max-width: 460px) {
+        font-size; 12px;
+    }
+`
 
 const Foot = styled.div`
     border-top: 1px solid lightgrey;
@@ -36,13 +53,15 @@ const Foot = styled.div`
 const LeftContainer = styled.div`
     display: flex;
     width: 50%;
-
+    justify-content: center;
 `
 
 const RightContainer = styled.div`
     display: flex;
+    flex-direction: column;
     width: 50%;
-
+    justify-content: flex-end;
+    align-items: center;
 `
 
 const FooterName = styled.span`
@@ -66,7 +85,45 @@ const Year = styled.sup`
 
 const SocialLink = styled.div`
     border-radius: 50%; 
-    border: 1px solid lightgrey;
-    padding: 3px;
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-size: 16px;
+    transition: .25s ease-in-out all; 
+    margin: 0 5px;
 
+    :hover {
+        background-color: black;
+        color: white;
+    }
+
+    @media (max-width: 460px) {
+        font-size: 12px;
+        width: 25px;
+        height: 25px;
+        font-size: 8px;
+    }
+`
+
+const LinkContainer = styled.div`
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+`
+
+const ContactEmail = styled.span`
+    font-size: 18px;
+    margin-bottom: 5px;
+
+    :hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 460px) {
+        font-size: 12px;
+    }
 `
