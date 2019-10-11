@@ -16,7 +16,9 @@ const IndexPage = () => (
       <Image src={imageSrc} alt="photograph of Rachel Hill"/>
 
       <Section>
-        JoAnne Noel is a New York based makeup artist who has worked on many of the worlds most famouse celebrities and models. Not only does she have the style, but also has been endowed with the talent to create animations of some of the most iconic people/images in fashion history. 
+        <TextDiv>
+          <HelveticaSpan>JoAnne Noel</HelveticaSpan>  is a New York based makeup artist who has worked on many of the worlds most famouse celebrities and models. Not only does she have the style, but also has been endowed with the talent to create animations of some of the most iconic people/images in fashion history. Her makeup philosophy is, beauty is meant to be celebrated, not covered up, so makeup looks natural and reveal the true beauty of each individual subject.
+        </TextDiv>
       </Section>
     </PageContainer>
 
@@ -33,24 +35,60 @@ const PageContainer = styled.div`
     justify-content: center;
     align-items: center;
 
+    @media (max-width: 700px) {
+      flex-direction: column;
+    }
+
 `
 
 const Image = styled.img`
-  width: 50%;
-
-  @media (max-width: 400px) {
-    display: none;
+  width: 40vw;
+  margin-top: 50px;
+    
+  @media (max-width: 700px) {
+    margin-top: 20px;
+    width: 100vw;
   }
 `
 
 const Section = styled.section`
   height: 60vh;
-  display: flex;
   align-items: center;
   padding: 0 40px;
-  font-size: 1.25em;
+  font-size: 2vw;
+  font-family: Lato, sans-serif;
+  line-height: 1.75em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 40px;
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 700px) {
+    padding: 0;
+    font-size: 1em;
+    justify-content: flex-start;
+    height: 100%;
+    margin-bottom: 30px;
+    margin-top: 30px;
     padding: 0;
   }
+
+  @media screen and (max-width: 460px) {
+    font-size: 12px;
+  }
+
+  @media screen and (max-width: 965px) {
+    font-size: 1em;
+  }
+`
+
+const HelveticaSpan = styled.span`
+  font-family: Helvetica Neue, sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  display: inline-block;
+`
+
+const TextDiv = styled.div`
+  width: 100%;
 `

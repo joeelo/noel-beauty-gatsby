@@ -68,7 +68,6 @@ const Image = styled.img`
 `
 
 const BioSection = styled.section`
-    font-family: Muli, sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
