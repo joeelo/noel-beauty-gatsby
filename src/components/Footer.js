@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import {SocialLink, Anchor}  from "../styled-components/styled-social-links";
 
 const Footer = () => {
     const dateYear = new Date().getFullYear();
@@ -25,17 +26,6 @@ const Footer = () => {
 
 export default Footer;
 
-const Anchor = styled.a`
-    color: inherit;
-
-    :vistied {
-        color: black;
-    }
-
-    @media (max-width: 460px) {
-        font-size; 12px;
-    }
-`
 
 const Foot = styled.div`
     border-top: 1px solid lightgrey;
@@ -83,31 +73,6 @@ const Year = styled.sup`
     font-size: 10px;
 `
 
-const SocialLink = styled.div`
-    border-radius: 50%; 
-    border: 1px solid black;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    font-size: 16px;
-    transition: .25s ease-in-out all; 
-    margin: 0 5px;
-
-    :hover {
-        background-color: black;
-        color: white;
-    }
-
-    @media (max-width: 460px) {
-        font-size: 12px;
-        width: 25px;
-        height: 25px;
-        font-size: 8px;
-    }
-`
-
 const LinkContainer = styled.div`
     display: flex;
     width: 100%;
@@ -127,3 +92,4 @@ const ContactEmail = styled.span`
         font-size: 12px;
     }
 `
+
