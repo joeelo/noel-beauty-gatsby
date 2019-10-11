@@ -7,7 +7,7 @@ const ContactPage = (props) => {
         <Layout>
             <PageContainer>
 
-                Contact JoAnne
+                <ContactSpan> Contact JoAnne </ContactSpan>
             </PageContainer>
         </Layout>
     )
@@ -19,4 +19,11 @@ const PageContainer = styled.div`
     width: 100vw;
     display: flex;
     flex-direction: column;
+    min-height: 400px;
+    justify-content: center;
+`
+
+const ContactSpan = styled.span`
+    font-family: Helvetica, sans-serfif;
+    text-decoration: underline;
 `
