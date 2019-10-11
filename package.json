@@ -7,6 +7,8 @@
   "dependencies": {
     "@nfront/global-styles": "^1.2.1",
     "babel-plugin-styled-components": "^1.10.6",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
     "gatsby": "^2.15.24",
     "gatsby-image": "^2.2.21",
     "gatsby-plugin-catch-links": "^2.1.10",
@@ -26,8 +28,13 @@
     "styled-components": "^4.4.0"
   },
   "devDependencies": {
+    "babel-jest": "^24.9.0",
+    "babel-preset-gatsby": "^0.2.18",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.9.0",
     "prettier": "^1.18.2",
-    "react-social-icons": "^4.1.0"
+    "react-social-icons": "^4.1.0",
+    "react-test-renderer": "^16.10.2"
   },
   "keywords": [
     "gatsby"
@@ -39,7 +46,7 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+    "test": "jest"
   },
   "repository": {
     "type": "git",
