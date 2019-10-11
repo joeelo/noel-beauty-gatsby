@@ -1,13 +1,14 @@
 import React from "react";
-import Layout from "../components/layout"
+import Layout from "../components/layout";
 import { graphql, Link } from "gatsby";
+import styled from "styled-components";
 
 const BlogPage = (graphQLQuery) => {
     const { data } = graphQLQuery;
     console.log(data);
     return (
         <Layout>
-
+            <PageContainer>
             <h1>Blog Page</h1>
             {data.allMarkdownRemark.edges.map(post => (
                 <div key={post.node.id}>
@@ -15,6 +16,8 @@ const BlogPage = (graphQLQuery) => {
                     <Link to={post.node.frontmatter.path}> Read More </Link>
                 </div>
             ))}
+
+            </PageContainer>
         </Layout>
     )
 }
@@ -37,3 +40,8 @@ export const pageQuery = graphql`
 `
 
 export default BlogPage;
+
+const PageContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+`
