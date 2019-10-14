@@ -1,32 +1,51 @@
-import React from "react";
+import React, { Component } from "react";
 import Layout from "../components/layout";
 import styled from "styled-components";
 import {SocialLink, Anchor} from "../styled-components/styled-social-links";
 
-const ContactPage = (props) => {
-    return (
-        <Layout>
-            <PageContainer>
+class ContactPage extends Component {
 
-                <ContactSpan>  Contact Joanne Noel for Beauty tips and advice, or if you want to be featured in upcoming animations/videos write a quick message!   
-                </ContactSpan>
+    state = {
+        name: "", 
+        email: "", 
+        content: ""
+    }
 
-                <ContactForm>
-                    <Input type="text" name="name" placeholder="name"/>
-                    <Input type="text" name="email" placeholder="email"/>
-                    <TextArea name="content" placeholder="write your message here"/>
-                    <button> submit </button>
-                </ContactForm>
+    handleSubmit = (event) => {
+        event.preventDefault()
+        console.log(this.state);
+    }
 
-                <LinkContainer>
-                    <ContactSocialLink> <Anchor href="#" target="_blank"> FB </Anchor></ContactSocialLink>
-                    <ContactSocialLink> <Anchor href="https://www.linkedin.com/in/joanne-noel-3008166/" target="_blank"> LKD </Anchor></ContactSocialLink>
-                    <ContactSocialLink> <Anchor href="https://www.instagram.com/joannenoel/?hl=en" target="_blank"> INS </Anchor></ContactSocialLink>
-                </LinkContainer>
-            </PageContainer>
-        </Layout>
-    )
+    handleChange = (event) => {
+        this.setState({[event.target.name]: event.target.value});
+    }
+
+    render(){
+        return (
+            <Layout>
+                <PageContainer>
+    
+                    <ContactSpan>  Contact Joanne Noel for Beauty tips and advice, or if you want to be featured in upcoming animations/videos write a quick message!   
+                    </ContactSpan>
+    
+                    <ContactForm onSubmit={this.handleSubmit}>
+                        <Input type="text" name="name" onChange={this.handleChange} placeholder="name" value={this.state.name}/>
+                        <Input type="text" name="email" onChange={this.handleChange} placeholder="email" value={this.state.email}/>
+                        <TextArea name="content" placeholder="write your message here" onChange={this.handleChange} value={this.state.content}/>
+                        <button> submit </button>
+                    </ContactForm>
+    
+                    <LinkContainer>
+                        <ContactSocialLink> <Anchor href="#" target="_blank"> FB </Anchor></ContactSocialLink>
+                        <ContactSocialLink> <Anchor href="https://www.linkedin.com/in/joanne-noel-3008166/" target="_blank"> LKD </Anchor></ContactSocialLink>
+                        <ContactSocialLink> <Anchor href="https://www.instagram.com/joannenoel/?hl=en" target="_blank"> INS </Anchor></ContactSocialLink>
+                    </LinkContainer>
+                </PageContainer>
+            </Layout>
+        )
+    }
 }
+
 
 export default ContactPage;
 
