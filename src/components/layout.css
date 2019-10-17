@@ -638,7 +638,7 @@ div[role="group"][tabindex] {
 
 @media only screen and (max-width: 760px) {
   body {
-    font-size: 4vw;
+    font-size: 18px;
   }
 }
 
