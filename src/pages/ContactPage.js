@@ -24,10 +24,11 @@ class ContactPage extends Component {
         return (
             <Layout>
                 <PageContainer>
+                    <ContactHeading> Contact JoAnne</ContactHeading>
+                    <ContactSpan>  
+                        Write a message for Beauty tips and advice, to be featured in upcoming animations/videos, or to simply reach out!  
+                    </ContactSpan>
                     <ContactForm onSubmit={this.handleSubmit}>
-                        <ContactSpan>  
-                            Contact Joanne Noel for Beauty tips and advice, or to be featured in upcoming animations/videos write a quick message!   
-                        </ContactSpan>
                         <Input 
                             type="text" 
                             name="name" 
@@ -47,13 +48,30 @@ class ContactPage extends Component {
                             onChange={this.handleChange} 
                             value={this.state.content}
                         />
-                    <button> submit </button>
+                        <SubmitButton> submit </SubmitButton>
                     </ContactForm>
-    
+
                     <LinkContainer>
-                        <ContactSocialLink> <Anchor href="#" target="_blank"> FB </Anchor></ContactSocialLink>
-                        <Anchor href="https://www.linkedin.com/in/joanne-noel-3008166/" target="_blank"><ContactSocialLink>  LKD </ContactSocialLink></Anchor>
-                        <ContactSocialLink> <Anchor href="https://www.instagram.com/joannenoel/?hl=en" target="_blank"> INS </Anchor></ContactSocialLink>
+                        <Anchor 
+                            href="#" 
+                            target="_blank"
+                        >
+                            <ContactSocialLink>  FB </ContactSocialLink>
+                        </Anchor>
+
+                        <Anchor 
+                            href="https://www.linkedin.com/in/joanne-noel-3008166/" 
+                            target="_blank"
+                        >
+                            <ContactSocialLink>  LKD </ContactSocialLink>
+                        </Anchor>
+
+                        <Anchor 
+                            href="https://www.instagram.com/joannenoel/?hl=en" 
+                            target="_blank"
+                        >
+                            <ContactSocialLink>  INS </ContactSocialLink>
+                        </Anchor>
                     </LinkContainer>
                 </PageContainer>
             </Layout>
@@ -65,26 +83,38 @@ class ContactPage extends Component {
 export default ContactPage;
 
 const PageContainer = styled.div`
-width: 100vw;
-display: flex;
-min-height: 400px;
-justify-content: space-around;
-flex-direction: column;
+    width: 100vw;
+    display: flex;
+    min-height: 400px;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+`
+
+const ContactHeading = styled.span`
+    font-size: 36px;
+    border-bottom: 2px solid black; 
+    padding-bottom: 3px;
+    margin: 50px auto 25px auto;
+    min-width: 260px;
+`
+    
+const ContactSpan = styled.span`
+    font-family: Helvetica, sans-serfif;
+    font-size: 12px;
+    text-align: center;
+    width: 40vw;
+    margin: 0 auto;
 `
 
 const ContactForm = styled.form`
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    margin-top: 4vh;
+    align-items: center;;
+    padding: 10px;
+    margin-top: 10px;
 `
 
-const ContactSpan = styled.span`
-    font-family: Helvetica, sans-serfif;
-    text-decoration: line-height: 1.25em;
-    grid-column-start: 2;
-    font-size: 18px;
-`
 
 const LinkContainer = styled.div`
     display: flex;
@@ -101,24 +131,39 @@ const ContactSocialLink = styled(SocialLink)`
     }
 `
 
-const ContactAnchor = styled(Anchor)`
-    
-`
-
-
 const Input = styled.input`
-    border: 1px solid black;
-    margin: 10px 0; 
+    border: 1px solid grey;
+    margin: 15px 0; 
     width: 40vw;
-    padding-left: 10px;
-    width: 75%;
+    padding: 10px;
+    width: 50%;
+    border-radius: 3px;
+    font-size: 14px;
 `
 
 const TextArea = styled.textarea`
-    border: 1px solid black;
-    width: 100%;
-    margin: 5px 0;
-    height: 200px;
+    border: 1px solid grey;
+    width: 50%;
+    margin: 15px 0;
+    height: 150px;
     padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 14px;
 `
 
+const SubmitButton = styled.button`
+    background-color: white;
+    padding: 5px 25px; 
+    border-radius: 3px;
+    font-size: 14px;
+    border-collapse: separate;
+    transition: .3s ease-in-out;
+    background-color: black;
+    color: white;
+    font-weight: 500;
+    
+    :hover {
+        box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);
+        background-color: rgb(30, 30, 30);
+    }
+`
