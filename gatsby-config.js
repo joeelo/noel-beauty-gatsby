@@ -53,7 +53,16 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     }, 
-    
+    {
+      resolve: `gatsby-source-wordpress`, 
+      options: {
+        baseUrl: `http://localhost:8888/phpMyAdmin/db_structure.php?server=1&db=gatsby_db`, 
+        protocol: `http`, 
+        hostingWPCOM: `false`, 
+        useACF: `true`, 
+        verboseOutput: `true`
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
