@@ -9,13 +9,6 @@ module.exports = {
     `gatsby-plugin-catch-links`, 
     `gatsby-plugin-styled-components`,
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
-      },
-    },
-    {
       // plugin that transforms the docs (.md) files into html contents added and configured
        resolve:`gatsby-transformer-remark`,
        options:{
