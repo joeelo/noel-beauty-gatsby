@@ -55,6 +55,14 @@ module.exports = {
         useACF: `true`, 
         verboseOutput: `true`
       }
+    }, 
+    {
+      resolve: `gatsby-source-graphql`, 
+      options: {
+        typeName: `WPGraphQL`, 
+        fieldName: `wpgraphql`, 
+        url: `http://localhost:8888/wordpress/graphql`
+      }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
