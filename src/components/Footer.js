@@ -15,9 +15,9 @@ const Footer = () => {
             <RightContainer>
                 <ContactEmail><Anchor href="mailto:noelbeauty@gmail.com"> NoelBeauty@gmail.com </Anchor></ContactEmail>
                 <LinkContainer>
-                    <SocialLink> FB </SocialLink>
-                    <SocialLink> <Anchor href="https://www.linkedin.com/in/joanne-noel-3008166/"> LKD </Anchor></SocialLink>
-                    <SocialLink> INS </SocialLink>
+                    <SocialLink> <FooterAnchor href="https://www.facebook.com/JoannenoelNYC"> FB </FooterAnchor> </SocialLink>
+                    <SocialLink> <FooterAnchor href="https://www.linkedin.com/in/joanne-noel-3008166/"> LKD </FooterAnchor></SocialLink>
+                    <SocialLink> <FooterAnchor href="https://www.instagram.com/joannenoel/"> INS </FooterAnchor></SocialLink>
                 </LinkContainer>
             </RightContainer>
         </Foot>
@@ -93,3 +93,6 @@ const ContactEmail = styled.span`
     }
 `
 
+const FooterAnchor = styled(Anchor)`
+    font-size: 12px; 
+`

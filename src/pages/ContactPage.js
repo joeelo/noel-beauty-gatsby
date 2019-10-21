@@ -17,6 +17,7 @@ class ContactPage extends Component {
     }
 
     handleChange = (event) => {
+        if (!event.isTrusted) return; 
         this.setState({[event.target.name]: event.target.value});
     }
 
@@ -28,7 +29,7 @@ class ContactPage extends Component {
                     <ContactSpan>  
                         Write a message for Beauty tips and advice, to be featured in upcoming animations/videos, or to simply reach out!  
                     </ContactSpan>
-                    <ContactForm onSubmit={this.handleSubmit}>
+                    <ContactForm onSubmit={this.handleSubmit} autoComplete="new-password">
                         <Input 
                             type="text" 
                             name="name" 
@@ -52,26 +53,26 @@ class ContactPage extends Component {
                     </ContactForm>
 
                     <LinkContainer>
-                        <Anchor 
+                        <ContactAnchor 
                             href="#" 
                             target="_blank"
                         >
                             <ContactSocialLink>  FB </ContactSocialLink>
-                        </Anchor>
+                        </ContactAnchor>
 
-                        <Anchor 
+                        <ContactAnchor 
                             href="https://www.linkedin.com/in/joanne-noel-3008166/" 
                             target="_blank"
                         >
                             <ContactSocialLink>  LKD </ContactSocialLink>
-                        </Anchor>
+                        </ContactAnchor>
 
-                        <Anchor 
+                        <ContactAnchor 
                             href="https://www.instagram.com/joannenoel/?hl=en" 
                             target="_blank"
                         >
                             <ContactSocialLink>  INS </ContactSocialLink>
-                        </Anchor>
+                        </ContactAnchor>
                     </LinkContainer>
                 </PageContainer>
             </Layout>
@@ -165,5 +166,11 @@ const SubmitButton = styled.button`
     :hover {
         box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);
         background-color: rgb(30, 30, 30);
+    }
+`
+
+const ContactAnchor = styled(Anchor)`
+    :hover {
+        box-shadow: 0 0 0 3px #e78267;
     }
 `

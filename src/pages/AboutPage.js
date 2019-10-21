@@ -12,7 +12,7 @@ const About = (props) => {
                     </Paragraph>
 
                     <Figure>
-                        <Image src="/images/about-me-image-1.jpeg" alt="image of desk with makeup"/>
+                        <Image src="https://images.unsplash.com/photo-1543087903-b62c09c23e70?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="image of desk with makeup"/>
                         <Caption> JoAnne Noel setting up for Martha Stewart's show </Caption>
                     </Figure>
 
@@ -26,7 +26,7 @@ const About = (props) => {
 
                     <Figure>
 
-                        <Image src="/images/about-me-image-2.jpg" alt="image of woman doing makeup on model"/>
+                        <Image src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80" alt="image of woman doing makeup on model"/>
                         <Caption> JoAnne Noel working on model </Caption>
 
                     </Figure>
@@ -36,7 +36,7 @@ const About = (props) => {
                     </Paragraph>
 
                     <Figure>
-                        <Image src="/images/about-me-image-3.jpg" alt="image of woman doing makeup on model"/>
+                        <Image src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="image of woman doing makeup on model"/>
                         <Caption> JoAnne Noel working on natural styling </Caption>
                     </Figure>
 
@@ -104,7 +104,3 @@ const Caption = styled.figcaption`
         font-size: 10px;
     }
 `
-
-{/* <Image src="/images/about-me-image-1.jpeg" alt="image of desk with makeup"/>
-<Image src="/images/about-me-image-2.jpg" alt="image of woman doing makeup on model"/>
-<Image src="/images/about-me-image-3.jpg" alt="image of woman doing makeup on model"/> */}

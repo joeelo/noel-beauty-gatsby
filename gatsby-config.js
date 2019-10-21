@@ -56,7 +56,7 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`, 
       options: {
-        baseUrl: `http://localhost:8888/phpMyAdmin/db_structure.php?server=1&db=gatsby_db`, 
+        baseUrl: `localhost:8888/wordpress`, 
         protocol: `http`, 
         hostingWPCOM: `false`, 
         useACF: `true`, 
