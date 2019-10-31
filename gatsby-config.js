@@ -53,7 +53,17 @@ module.exports = {
         protocol: `http`, 
         hostingWPCOM: `false`, 
         useACF: `true`, 
-        verboseOutput: `true`
+        verboseOutput: `true`,
+        includedRoutes: [
+          // "**/categories",
+          "**/posts",
+          "**/pages",
+          // "**/media",
+          // "**/tags",
+          // "**/taxonomies",
+          // "**/users",
+        ],
+
       }
     }, 
     {

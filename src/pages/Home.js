@@ -34,8 +34,8 @@ const Image = styled.img`
 `
 
 const PhotoContainer = styled.div`
-width: 45%;
-background-color: green;
+    width: 45%;
+    background-color: green;
 `
 
 const TextContainer = styled.div`

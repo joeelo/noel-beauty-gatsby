@@ -42,8 +42,16 @@ const PageContainer = styled.div`
 `
 
 const Image = styled.img`
-  width: 40vw;
+  width: 35vw;
   margin-top: 50px;
+  height: auto;
+
+  @media only screen 
+  and (min-device-width : 768px) 
+  and (max-device-width : 1024px)  { 
+    width: 40vw;
+    height: auto;
+  }
     
   @media (max-width: 700px) {
     margin-top: 20px;
@@ -55,7 +63,7 @@ const Section = styled.section`
   height: 60vh;
   align-items: center;
   padding: 0 40px;
-  font-size: 2vw;
+  font-size: 22px;
   font-family: Lato, sans-serif;
   line-height: 1.75em;
   display: flex;
