@@ -1,5 +1,5 @@
-const path = require(`path`)
-const slash = require(`slash`)
+const path = require(`path`);
+const slash = require(`slash`);
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   // query content for WordPress posts
@@ -15,13 +15,14 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-  const postTemplate = path.resolve(`./src/templates/post.js`)
+
+  const PostTemplate = path.resolve(`./src/templates/PostTemplate.js`)
   result.data.allWordpressPost.edges.forEach(edge => {
     createPage({
       // will be the url for the page
-      path: edge.node.slug,
+      path: `/blog/${edge.node.slug}`,
       // specify the component template of your choice
-      component: slash(postTemplate),
+      component: slash(PostTemplate),
       // In the ^template's GraphQL query, 'id' will be available
       // as a GraphQL variable to query for this posts's data.
       context: {
