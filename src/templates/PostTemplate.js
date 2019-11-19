@@ -6,7 +6,7 @@ import Layout from '../../src/components/layout';
 class PostTemplate extends Component {
     render() {
         const post = this.props.data.wordpressPost;
-
+        console.log(this.props);
         // @TODO: STEP #5: Use title and content in Gatsby.
         return (
             <Layout>
@@ -32,6 +32,8 @@ query MyQuery {
         edges {
           node {
             slug
+            title 
+            content
           }
         }
       }

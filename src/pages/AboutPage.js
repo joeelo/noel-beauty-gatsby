@@ -8,7 +8,7 @@ const About = (props) => {
             <PageContainer>
                 <BioSection>
                     <Paragraph> 
-                        A native New Yorker, Joanne Noel's style of classic beauty and flawless skin comes from her passion for classic film and fashion in the mid 20th century. It is a love that has led her to the halls of New York's Fashion Institute of Technology <i>(FIT)</i>, and on to becoming the top global sales and makeup associate at Sak's Fifth Avenue, which was known as the number one retailer in the world. 
+                        <strong> Native New Yorker </strong>, Joanne Noel's style of classic beauty and flawless skin comes from her passion for classic film and fashion in the mid 20th century. It is a love that has led her to the halls of New York's Fashion Institute of Technology <i>(FIT)</i>, and on to becoming the top global sales and makeup associate at Sak's Fifth Avenue, which was known as the number one retailer in the world. 
                     </Paragraph>
 
                     <Figure>
@@ -63,7 +63,7 @@ const PageContainer = styled.div`
 `
 
 const Image = styled.img`
-    width: 75%;
+    width: 85%;
     margin: 1% 0;
 `
 
@@ -72,11 +72,13 @@ const BioSection = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 75%;
+    margin-top: 50px;
 `
 
 const Paragraph = styled.p`
     margin: 2% 0px;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 2em;
     font-family: Lato, sans-serif; 
     padding: 0 4vw; 

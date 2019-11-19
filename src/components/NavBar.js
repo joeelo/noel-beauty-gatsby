@@ -10,7 +10,6 @@ const NavBar = (props) => {
             <Nav>
                 <Link to="/AboutPage"> <NavItem> About </NavItem></Link>
                 <Link to="/PortfolioPage"> <NavItem> Portfolio </NavItem> </Link> 
-                <Link to="/CelebrityPage"> <NavItem> Celebrity </NavItem> </Link>
                 <Link to="/BlogPage"> <NavItem> Blog </NavItem> </Link>
                 <Link to="/VideoPage"> <NavItem> Videos </NavItem> </Link>
                 <Link to="/ContactPage"> <NavItem> Contact </NavItem> </Link>

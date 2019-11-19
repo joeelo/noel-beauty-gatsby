@@ -1,11 +1,10 @@
-import { graphql } from "gatsby";
-import { useStaticQuery } from "gatsby";
 import React from 'react'
+import { useStaticQuery, graphql, Link } from "gatsby";
 import { createPages } from "../../gatsby-node";
 import PostTemplate from "../templates/PostTemplate";
 
-
-const data =  useStaticQuery(graphql`
+const BlogPage = () => {
+    const data = useStaticQuery(graphql`
     query {
         wpgraphql {
             posts { 
@@ -21,22 +20,21 @@ const data =  useStaticQuery(graphql`
     }
 `)
 
-let bullets = data.query.wpgraphql.posts.edges.map(item => {
-    const { title, date, slug } = item.node;
-    createPages({
-        component: PostTemplate, 
-        path: `/blog/${slug}`,
-        context: {
-            slug: slug
-        }
-    })
+let bullets = data.wpgraphql.posts.edges.map(item => {
+    const {title, date, slug} = item.node
+    return (
+        <li>
+            <Link to={`/blog/${slug}`}> 
+                <h2> 
+                    {title}
+                </h2>
+            </Link>
+        </li>
+    )
 })
-
-const BlogPage = () => {
-    console.log(bullets);
     return (
         <div>
-            Working
+            {bullets}
         </div>
     )
 }
