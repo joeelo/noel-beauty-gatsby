@@ -5,10 +5,11 @@ import Layout from '../../src/components/layout';
 
 const PostTemplate = ({ data }) => {
   console.log(data);
+  const { title, content } = data.wpgraphql.posts.edges[0].node
   return (
       <Layout>
-          <h1 dangerouslySetInnerHTML={{ __html: data.title }} />
-          <div dangerouslySetInnerHTML={{ __html: data.content }} />
+          <h1 dangerouslySetInnerHTML={{ __html: title }} />
+          <div dangerouslySetInnerHTML={{ __html: content }} />
       </Layout>
   );    
 }
