@@ -1,7 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql, Link } from "gatsby";
-import { createPages } from "../../gatsby-node";
-import PostTemplate from "../templates/PostTemplate";
+import Layout from "../components/layout";
 
 const BlogPage = () => {
     const data = useStaticQuery(graphql`
@@ -22,20 +21,22 @@ const BlogPage = () => {
 
 let bullets = data.wpgraphql.posts.edges.map(item => {
     const {title, date, slug} = item.node
+
     return (
-        <li>
+        <div key={slug}>
             <Link to={`/blog/${slug}`}> 
-                <h2> 
-                    {title}
-                </h2>
+                <h2> {title} </h2>
             </Link>
-        </li>
+                <span> {date} </span>
+        </div>
     )
 })
     return (
-        <div>
-            {bullets}
-        </div>
+        <Layout>
+            <div>
+                {bullets}
+            </div>
+        </Layout>
     )
 }
 
