@@ -1,43 +1,33 @@
 import React from 'react';
 import styled from "styled-components";
-
-const Container = styled.div`
-    width: 15vw;
-    margin: 1%;
-    padding-bottom: 100px;
-`
-
-const ImageContainer = styled.div`
-    width: 100%;
-    height: 15vw;
-    margin: 1%;
-`
-
-const Image = styled.img`
-    width: 100%;
-    height: 100%;
-`
-
-const BlogTitle = styled.h3`
-    font-family: Adamina, serif;
-    font-weight: 400;
-`
+import { Link } from "gatsby";
 
 const BlogInstance = (props) => {
-    const { blog } = props;
-    console.log(blog);
+    const { title, featuredImage, date, slug } = props;
     return (
         <Container>
-            
-            <ImageContainer>
-                <Image src={blog.img}/>
-                <div>
-                    <BlogTitle>{blog.title}</BlogTitle>
-                </div>
-            </ImageContainer>
+            <Link to={`/blog/${slug}`}>
+                    <Image src={featuredImage.altText}/>
+                    <BlogTitle>{title}</BlogTitle>
+            </Link>
         </Container>
     )
 }
 
 
 export default BlogInstance;
+
+const Container = styled.div`
+    width: 100%;
+    display: flex;
+`
+
+const Image = styled.img`
+    width: 40vw;
+    max-height: 60vw;
+`
+
+const BlogTitle = styled.h3`
+    font-family: Adamina, serif;
+    font-weight: 400;
+`

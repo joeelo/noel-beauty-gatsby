@@ -24,7 +24,6 @@ exports.createPages = async ({ graphql, actions }) => {
 
   
   result.data.wpgraphql.posts.edges.forEach(edge => {
-    console.log(edge);
     createPage({
       // will be the url for the page
       path: `/blog/${edge.node.slug}`,
@@ -33,7 +32,8 @@ exports.createPages = async ({ graphql, actions }) => {
       // In the ^template's GraphQL query, 'id' will be available
       // as a GraphQL variable to query for this posts's data.
       context: {
-        id: edge.node.id,
+        slug: edge.node.slug, 
+        id: edge.node.id
       },
     })
   })

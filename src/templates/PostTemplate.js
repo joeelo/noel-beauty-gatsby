@@ -1,11 +1,23 @@
 import { graphql, pageQuery } from 'gatsby';
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React from 'react';
 import Layout from '../../src/components/layout';
 
+export const query = graphql`
+  query($slug: String!){
+    wpgraphql {
+      postBy(slug: $slug) {
+        id
+        title 
+        content 
+      } 
+    }
+  }
+`
+
 const PostTemplate = ({ data }) => {
-  console.log(data);
-  const { title, content } = data.wpgraphql.posts.edges[0].node
+  const { title, content } = data.wpgraphql.postBy
+
   return (
       <Layout>
           <h1 dangerouslySetInnerHTML={{ __html: title }} />
@@ -22,18 +34,3 @@ const PostTemplate = ({ data }) => {
 
 export default PostTemplate;
 
-export const query = graphql`
-  query Blogs{
-    wpgraphql {
-      posts(where: {title: "an amazing"}) {
-        edges {
-          node {
-            id
-            title 
-            content 
-          }
-        }
-      } 
-    }
-  }
-`
