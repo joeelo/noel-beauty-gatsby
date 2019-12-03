@@ -52,7 +52,7 @@ class ContactPage extends Component {
                         <SubmitButton> submit </SubmitButton>
                     </ContactForm>
 
-                    <LinkContainer>
+                    {/* <LinkContainer>
                         <ContactAnchor 
                             href="#" 
                             target="_blank"
@@ -73,7 +73,7 @@ class ContactPage extends Component {
                         >
                             <ContactSocialLink>  INS </ContactSocialLink>
                         </ContactAnchor>
-                    </LinkContainer>
+                    </LinkContainer> */}
                 </PageContainer>
             </Layout>
         )

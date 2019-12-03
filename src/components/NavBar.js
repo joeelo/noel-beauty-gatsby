@@ -27,7 +27,7 @@ const NavContainer = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 1vh auto;
+    margin: 1vh auto 5vh auto;
     height: 5vh;
 
     @media (max-width: 420px) {

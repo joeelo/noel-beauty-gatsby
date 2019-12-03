@@ -73,11 +73,9 @@ const BioSection = styled.section`
     justify-content: center;
     align-items: center;
     width: 75%;
-    margin-top: 50px;
 `
 
 const Paragraph = styled.p`
-    margin: 2% 0px;
     font-size: 18px;
     line-height: 2em;
     font-family: Lato, sans-serif; 

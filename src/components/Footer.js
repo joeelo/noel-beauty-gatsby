@@ -34,7 +34,7 @@ const Foot = styled.div`
     width: 100vw;
     position: relative;
     right: 10vw;
-    margin-top: 20px;
+    margin-top: 15vh;
     align-items: center;
     justify-content: space-between;
     padding: 20px;

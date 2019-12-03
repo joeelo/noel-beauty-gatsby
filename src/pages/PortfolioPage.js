@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../components/layout";
 import styled from "styled-components";
+import Footer from "../components/Footer"
 
 const PortfolioPage = (props) => {
     return (
@@ -32,13 +33,12 @@ export default PortfolioPage;
 const PageContainer = styled.div`
     width: 100%;
     display: flex;
-    flex-grow: 1;
+    max-height: 80vh;
 `
 
 const MainContainer = styled.div`
     width: 100vw;
-    height: 90vh;
-    margin-top: 5vh;
+    height: 80vh;
 
     @media (max-width: 600px) {
         height: 60vh;

@@ -18,11 +18,11 @@ const HeroBlogInstance = (props) => {
 export default HeroBlogInstance;
 
 const Container = styled.div`
-    width: 100vw;
-    position: relative;
+    width: 100%;
     display: flex;
     overflow: none;
-    right: 10vw;
+    text-align: center;
+    margin-bottom: 10vh;
 `
 
 const Image = styled.img`
@@ -33,4 +33,6 @@ const Image = styled.img`
 const BlogTitle = styled.h3`
     font-family: Adamina, serif;
     font-weight: 400;
+    color: black;
+    margin-top: -20px;
 `
