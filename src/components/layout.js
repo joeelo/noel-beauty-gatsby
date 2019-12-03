@@ -11,8 +11,15 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./Header";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
-import styled from "styled-components";
-import "./layout.css"
+import styled, { createGlobalStyle } from "styled-components";
+import "./layout.css";
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    overflow-x: hidden;
+  }
+`
+
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -27,6 +34,7 @@ const Layout = ({ children }) => {
 
   return (
     <SiteContainer>
+      <GlobalStyle />
       <Header siteTitle={data.site.siteMetadata.title} />
       <NavBar/>
       <MainContentWrapper>

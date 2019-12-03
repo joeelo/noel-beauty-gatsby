@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import { Link } from "gatsby";
 
-const BlogInstance = (props) => {
+const HeroBlogInstance = (props) => {
     const { title, featuredImage, date, slug } = props;
     return (
         <Container>
@@ -15,16 +15,19 @@ const BlogInstance = (props) => {
 }
 
 
-export default BlogInstance;
+export default HeroBlogInstance;
 
 const Container = styled.div`
-    width: 100%;
+    width: 100vw;
+    position: relative;
     display: flex;
+    overflow: none;
+    right: 10vw;
 `
 
 const Image = styled.img`
-    width: 40vw;
-    max-height: 40vw;
+    width: 100%;
+    max-height: 60vh;
 `
 
 const BlogTitle = styled.h3`
