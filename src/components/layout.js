@@ -27,18 +27,18 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <SiteContainer>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <NavBar/>
-        <MainContentWrapper>
+    <SiteContainer className='site-container'>
+      <Header siteTitle={data.site.siteMetadata.title} />
+      <NavBar/>
+      <MainContentWrapper>
 
-          {children}
+        {children}
 
-        </MainContentWrapper>
+      </MainContentWrapper>
 
-        <Footer/>
+      <Footer/>
 
-      </SiteContainer>
+    </SiteContainer>
   )
 }
 
@@ -49,7 +49,7 @@ const SiteContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  width: 80vw;
+  width: 100vw;
   margin: 0 auto;
 `
 

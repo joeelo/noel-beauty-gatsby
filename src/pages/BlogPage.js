@@ -7,63 +7,61 @@ import HeroBlogInstance from '../components/HeroBlogInstance';
 
 const BlogPage = () => {
     const data = useStaticQuery(graphql`
-    query {
-        wpgraphql {
-            posts { 
-                edges {
-                    node {
-                        id
-                        title 
-                        slug 
-                        date
-                        featuredImage {
-                            link
-                            altText
-                        }
-                    }    
-                }
-            }
-        }
-    }
+  query {
+		wpgraphql {
+			posts {
+				edges {
+					node {
+						id
+						content
+						date 
+						title 
+						slug 
+						featuredImage {
+							mediaItemUrl
+						}
+					}
+				}
+			}
+		}
+	}
 `)
 
-console.log(data);
 
 
 let bullets = data.wpgraphql.posts.edges.map((item, index) => {
-    const {title, date, slug, featuredImage} = item.node
-    console.log(index);
-    // hero or regular blog ternary
-    return (
+	const { title, date, slug, featuredImage, id } = item.node
+	console.log(item);
 
-        index === 0 || index % 7 === 0 ?
+	// hero or regular blog ternary
+	return (
 
-        <HeroBlogInstance 
-            key={slug}
-            slug={slug}
-            title={title}
-            date={date}
-            featuredImage={featuredImage}
-        />
-        : 
+		index === 0 || index % 7 === 0 ?
 
-
-        <BlogInstance 
-            key={slug}
-            slug={slug}
-            title={title}
-            date={date}
-            featuredImage={featuredImage}
-        />
-    )
+		<HeroBlogInstance 
+				key={id}
+				slug={slug}
+				title={title}
+				date={date}
+				featuredImage={featuredImage}
+		/>
+		: 
+		<BlogInstance 
+				key={id}
+				slug={slug}
+				title={title}
+				date={date}
+				featuredImage={featuredImage}
+		/>
+	)
 })
-    return (
-        <Layout>
-            <BlogContainer>
-                {bullets}
-            </BlogContainer>
-        </Layout>
-    )
+	return (
+		<Layout>
+			<BlogContainer>
+				{bullets}
+			</BlogContainer>
+		</Layout>
+	)
 }
 
 export default BlogPage
@@ -73,14 +71,3 @@ const BlogContainer = styled.div`
     flex-direction: column;
     width: 100vw;
 `
-
-{
-    /* <div key={slug}>
-<Link to={`/blog/${slug}`}> 
-    <img src={featuredImage.altText}/>
-    <h2> {title} </h2>
-</Link>
-    <span> {date} </span>
-</div> */
-}
-

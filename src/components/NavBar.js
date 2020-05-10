@@ -29,10 +29,10 @@ const NavContainer = styled.div`
     align-items: center;
     margin: 1vh auto 5vh auto;
     height: 5vh;
+    max-width: 700px;
 
     @media (max-width: 420px) {
         width: 100vw;
-        margin-left: -10vw;
     }
 `
 

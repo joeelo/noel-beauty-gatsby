@@ -29,7 +29,8 @@ const IndexPage = () => (
 export default IndexPage;
 
 const PageContainer = styled.div`
-    width: 100%;
+    width: 90vw;
+    max-width: 1100px;
     display: flex;
     margin: 0 auto;
     justify-content: center;

@@ -3,15 +3,16 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 
 const HeroBlogInstance = (props) => {
-    const { title, featuredImage, date, slug } = props;
-    return (
-        <Container>
-            <Link to={`/blog/${slug}`}>
-                    <Image src={featuredImage.altText}/>
-                    <BlogTitle>{title}</BlogTitle>
-            </Link>
-        </Container>
-    )
+	const { title, featuredImage, date, slug } = props;
+    console.log(props);
+	return (
+		<Container>
+			<Link to={`/blog/${slug}`}>
+				{ featuredImage &&   <Image src={featuredImage.mediaItemUrl}/> }
+				<BlogTitle>{title}</BlogTitle>
+			</Link>
+		</Container>
+	)
 }
 
 

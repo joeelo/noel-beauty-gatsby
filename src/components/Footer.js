@@ -3,25 +3,25 @@ import styled from "styled-components";
 import {SocialLink, Anchor}  from "../styled-components/styled-social-links";
 
 const Footer = () => {
-    const dateYear = new Date().getFullYear();
-    return (
-        <Foot>
-            <LeftContainer>
+	const dateYear = new Date().getFullYear();
+	return (
+		<Foot>
 
-                <FooterName> JoAnne Noel </FooterName>
-                <Year>{dateYear}</Year>
-            </LeftContainer>
+			<LeftContainer>
+				<FooterName> JoAnne Noel </FooterName>
+				<Year>{dateYear}</Year>
+			</LeftContainer>
 
-            <RightContainer>
-                <ContactEmail><Anchor href="mailto:noelbeauty@gmail.com"> NoelBeauty@gmail.com </Anchor></ContactEmail>
-                <LinkContainer>
-                    <SocialLink> <FooterAnchor href="https://www.facebook.com/JoannenoelNYC"> FB </FooterAnchor> </SocialLink>
-                    <SocialLink> <FooterAnchor href="https://www.linkedin.com/in/joanne-noel-3008166/"> LKD </FooterAnchor></SocialLink>
-                    <SocialLink> <FooterAnchor href="https://www.instagram.com/joannenoel/"> INS </FooterAnchor></SocialLink>
-                </LinkContainer>
-            </RightContainer>
-        </Foot>
-    )
+			<RightContainer>
+				<ContactEmail><Anchor href="mailto:noelbeauty@gmail.com"> NoelBeauty@gmail.com </Anchor></ContactEmail>
+				<LinkContainer>
+					<SocialLink> <FooterAnchor href="https://www.facebook.com/JoannenoelNYC"> FB </FooterAnchor> </SocialLink>
+					<SocialLink> <FooterAnchor href="https://www.linkedin.com/in/joanne-noel-3008166/"> LKD </FooterAnchor></SocialLink>
+					<SocialLink> <FooterAnchor href="https://www.instagram.com/joannenoel/"> INS </FooterAnchor></SocialLink>
+				</LinkContainer>
+			</RightContainer>
+		</Foot>
+	)
 }
 
 export default Footer;
@@ -33,7 +33,6 @@ const Foot = styled.div`
     flex-shrink: 0;
     width: 100vw;
     position: relative;
-    right: 10vw;
     margin-top: 15vh;
     align-items: center;
     justify-content: space-between;

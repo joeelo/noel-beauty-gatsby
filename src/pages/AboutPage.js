@@ -57,9 +57,11 @@ const About = (props) => {
 export default About;
 
 const PageContainer = styled.div`
-    width: 100%;
+    width: 80vw;
     display: flex;
     justify-content: center;
+    max-width: 1100px;
+    margin: 0 auto;
 `
 
 const Image = styled.img`
@@ -72,7 +74,8 @@ const BioSection = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 75%;
+    width: 95vw;
+    max-width: 700px;
 `
 
 const Paragraph = styled.p`

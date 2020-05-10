@@ -9,16 +9,6 @@ module.exports = {
     `gatsby-plugin-catch-links`, 
     `gatsby-plugin-styled-components`,
     {
-      // plugin that transforms the docs (.md) files into html contents added and configured
-       resolve:`gatsby-transformer-remark`,
-       options:{
-            commonmark: true,
-            footnotes: true,
-            pedantic: true,
-            gfm: true,
-       }
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/images`,
@@ -47,21 +37,11 @@ module.exports = {
       },
     }, 
     {
-      resolve: `gatsby-source-wordpress`, 
-      options: {
-        baseUrl: `http://localhost:8888/wordpress`, 
-        protocol: `http`, 
-        hostingWPCOM: `false`, 
-        useACF: `true`, 
-        verboseOutput: `true`,
-      }
-    }, 
-    {
       resolve: `gatsby-source-graphql`, 
       options: {
         typeName: `WPGraphQL`, 
         fieldName: `wpgraphql`, 
-        url: `http://localhost:8888/wordpress/graphql`
+        url: `http://54.177.142.73/graphql`
       }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
